@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SU iVE 2026 — Certificate of Participation</title>
+<meta name="description" content="Generate your official SU iVE 2026 Certificate of Participation — Sonargaon University Innovation Hub." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <img class="hero__poster" src="assets/event-poster.png" alt="SU iVE 2026 — SU Robot Exhibition and E-Sports Carnival, organised by the Sonargaon University Innovation Hub, 28 September 2026 at SU Auditorium">
+    <div class="hero__scrim"></div>
+    <div class="hero__text">
+      <p class="eyebrow">Sonargaon University Innovation Hub</p>
+      <h1>Certificate of Participation</h1>
+      <p class="hero__sub">Enter your name below to generate your official SU iVE 2026 certificate — instantly, and ready to keep.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel" id="generator">
+      <div class="panel__form">
+        <label for="fullName">Full name, as it should appear on the certificate</label>
+        <input type="text" id="fullName" maxlength="60" placeholder="e.g. Md Alif Rahman" autocomplete="off">
+        <p class="hint" id="hint">Certificates are generated on your device — nothing is uploaded anywhere.</p>
+        <div class="panel__actions">
+          <button class="btn btn--primary" id="downloadBtn" disabled>Download certificate</button>
+        </div>
+      </div>
+
+      <div class="panel__preview">
+        <canvas id="certificateCanvas" width="2000" height="1415" aria-label="Certificate preview"></canvas>
+        <p class="preview__caption" id="idCaption">Your certificate ID will appear here once you enter a name.</p>
+      </div>
+    </section>
+
+    <section class="log" id="logSection" hidden>
+      <div class="log__header">
+        <h2>Certificates generated on this device</h2>
+        <button class="btn btn--ghost" id="exportBtn">Export as CSV</button>
+      </div>
+      <table>
+        <thead><tr><th>Name</th><th>Certificate ID</th><th>Generated</th></tr></thead>
+        <tbody id="logBody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>SU iVE 2026</strong> — SU Robot Exhibition &amp; E-Sports Carnival</p>
+    <p>28 September 2026 · SU Auditorium, Sonargaon University, Green Road, Panthapath, Dhaka</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
